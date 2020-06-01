@@ -7,10 +7,24 @@
  */
 
 .icon-block {
-  padding: 0 15px;
+    padding: 0 15px;
 }
+
 .icon-block .material-icons {
-	font-size: inherit;
+    font-size: inherit;
+}
+
+body {
+    background-color: #F0E9D8;
+}
+
+.navigation-color {
+    color: #868686
+}
+
+.icon-size {
+    height: 60px;
+    width: 60px;
 }
 
 /* Kommentar von Bella */
