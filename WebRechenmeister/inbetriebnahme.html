@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
     <title>DIY Rechenmeister</title>
-    
+
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,20 +16,22 @@
 <body>
 
     <nav class="grey lighten-2" role="navigation">
-        
-         
-        <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><center> <img class="responsive-img" src="LogoRechenmeisterW.png"> </center></a>
-            
-        
-            
-            
+
+
+        <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">
+                <center> <img class="responsive-img" src="LogoRechenmeisterW.png"> </center>
+            </a>
+
+
+
+
 
 
 
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
-            <ul class="sidenav" id="nav-mobile"> 
-                <li><a href="einführung.html">Einführung</a></li> 
+            <ul class="sidenav" id="nav-mobile">
+                <li><a href="einführung.html">Einführung</a></li>
                 <li><a href="material.html">Material</a></li>
                 <li><a href="bauanleitung.html">Bauanleitung</a></li>
                 <li><a href="inbetriebnahme.html">Inbetriebnahme</a></li>
@@ -67,10 +69,43 @@
                     <div class="icon-block">
 
                         <h4 class="center">Inbetriebnahme</h4>
-                        <img class="responsive-img" src="rechenbrett.png">
+                        <h5 class="center">Wertebereich</h5>
+                        <img class="responsive-img" src="wertebereich.png">
 
-                        <p class="light">Baue dir dein eigenes cyberphysisches Rechenbrett mit einem Raspberry-Pi und rechne mit den römischen Zahlen mittels Bilderkennung.</p>
                     </div>
+
+                    <div class="icon-block">
+                        <h5 class="center">Addition</h5>
+
+                        <p>Alle Rechenpfennige werden aus dem ersten und zweiten Feld in das Ergebnisfeld verschoben. Jeder Rechenpfennig bleibt dabei auf seiner Linie oder in seinem Zwischenraum liegen. Eventuell sind im Ergebnisfeld Rechenpfennige höherzulegen, da maximal 5 Rechenpfennige pro Spalte auf der Linie / Zwischenraum liegen können. Die Reihenfolge, in der Rechenpfennige höhergelegt werden, ist unerheblich.</p>
+
+                        <h6>Beispiel: 19 + 12 = 31</h6>
+
+                        <img class="responsive-img" src="addition1.png">
+                        <p>Beide Zahlen werden als erstes in die erste und zweite Spalte gelegt. Nun können alle Rechenpfennige welche sich auf der gleichen Linie oder sich im gleichen Zwischenraum befinden in die rechte Spalte verschoben werden.</p>
+                        <img class="responsive-img" src="addition2.png">
+                        <p>Nun kann theoretisch schon das Endresultat aus der rechten Spalte abgelesen werden. Um allerdings die Lesbarkeit zu verbessern wird in den nächsten Schritten das Endresultat jeweils vereinfacht. Hier können fünf Rechenpfennige (weiss markiert) welche sich auf der 1er-Linie befinden durch einen Rechenpfennig im 5er-Zwischenraum ersetzt werden. In einem nächsten Schritt können die beiden Rechenpfennige, welche sich nun im 5er-Zwischenraum befinden durch einen zusätzlichen Rechenpfennig auf der 10er-Linie ersetzt werden.</p>
+                        <img class="responsive-img" src="addition3.png">
+                        <p>Das vereinfachte Endresultat kann nun aus der rechten Spalte abgelesen werden.</p>
+
+
+                    </div>
+
+                    <div class="icon-block">
+                        <h5 class="center">Subtraktion</h5>
+
+                        <p>Nacheinander werden alle Rechenpfennige aus dem zweiten Feld weggenommen. Jedes Mal, wenn aus dem zweiten Feld ein Rechenpfennig weggenommen wird, ist auch ein Rechenpfennig aus dem ersten Feld wegzunehmen. Beide Rechenpfennige müssen auf der gleichen Linie oder im gleichen Zwischenraum liegen. Liegen noch Rechenpfennige im zweiten Feld und sind die jeweiligen Linien und Zwischenräume im ersten Feld leer, so sind im ersten Feld Rechenpfennige tieferzulegen.</p>
+
+                        <h6>Beispiel: 119 - 62 = 57</h6>
+
+                        <img class="responsive-img" src="subtraktion1.png">
+                        <p>Beide Zahlen werden als erstes in die erste und zweite Spalte gelegt. Da zu Beginn im Zwischenraum, auf Höhe des obersten Rechenpfennigs der zweiten Spalte, kein Rechenpfennig vorhanden ist muss der eins höher liegende Rechenpfennig (weiss markiert) tiefer gelegt werden. Dazu werden zwei Rechenpfennige in den 50er-Zwischenraum gelegt. Der Rechenpfennig auf der 100er-Linie kann entfernt werden.</p>
+                        <img class="responsive-img" src="subtraktion2.png">
+                        <p>Nun wird jedes Mal, wenn aus der zweiten Spalte ein Rechenpfennig entfernt wird, auch ein Rechenpfennig aus dem ersten Feld entfernt. Beide Rechenpfennige müssen dazu auf der gleichen Linie oder im gleichen Zwischenraum liegen. Dies wird so lange gemacht, bis sich keine Rechenpfennige mehr in der zweiten Spalte befinden. Das Endresultat kann nun in der linken Spalte abgelesen werden.</p>
+
+
+                    </div>
+
                 </div>
 
             </div>
@@ -78,8 +113,8 @@
         </div>
         <br><br>
     </div>
-    
-    
+
+
 
     <footer class="page-footer grey">
         <div class="container">
@@ -88,13 +123,13 @@
                     <h6 class="white-text">ws3C - Projekt - funktionaler Prototype</h6>
                     <p class="grey-text text-lighten-3">Dieser Prototyp einer Website ist im Rahmen eines Projektes im ws3C an der FHNW entstanden.</p>
                 </div>
-                
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                Made by Isabella Nagy und Martin Ott
+
             </div>
-        </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    Made by Isabella Nagy und Martin Ott
+                </div>
+            </div>
     </footer>
 
 
@@ -102,8 +137,8 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
-            
-            
+
+
 
 </body>
 
